@@ -1,5 +1,5 @@
 import React from "react";
-import '../hojas-de-estilo/Boton.css'
+import "../hojas-de-estilo/Boton.css";
 
 const Boton = (props) => {
   const esOperador = (valor) => {
@@ -9,8 +9,9 @@ const Boton = (props) => {
   return (
     <div
       className={`boton-contenedor ${
-        esOperador(props.children) ? "operador" : ''
+        esOperador(props.children) ? "operador" : ""
       }`.trimEnd()}
+      onClick={() => props.manejarClic(props.children)}
     >
       {props.children}
     </div>
