@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { evaluate } from 'mathjs';
+import { evaluate } from "mathjs";
 import Boton from "./componentes/Boton";
 import BotonClear from "./componentes/BotonClear";
 import Pantalla from "./componentes/Pantalla";
@@ -14,8 +14,12 @@ function App() {
   };
 
   const calcularResultado = () => {
-    setInput(evaluate(input));
-  }
+    if (input) {
+      setInput(evaluate(input));
+    } else {
+      alert("No hay nada que calcular");
+    }
+  };
 
   return (
     <div className="App">
