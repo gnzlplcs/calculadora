@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Boton from "./componentes/Boton";
+import BotonClear from "./componentes/BotonClear";
+import Pantalla from "./componentes/Pantalla";
 import "./App.css";
 import freeCodeCampLogo from "./imagenes/freecodecamp-logo.png";
-import Pantalla from "./componentes/Pantalla";
-import BotonClear from "./componentes/BotonClear";
 
 function App() {
   const [input, setInput] = useState("");
@@ -48,7 +48,7 @@ function App() {
           <Boton manejarClic={agregarInput}>/</Boton>
         </div>
         <div className="fila">
-          <BotonClear>Clear</BotonClear>
+          <BotonClear manejarClic={() => setInput("")}>Clear</BotonClear>
         </div>
       </div>
     </div>
